@@ -35,4 +35,21 @@ So that is a big obstacle to progress in AI is the fact we don't now entirely ho
 
 The reason we need unsupervised learning is the fact that the number of the amount of the data we ask machine to predict is sort of different. These different paradigms of learning are very different. \\ \\
 
+In the reinforcement learning, you ask machine to predict a reward(cost) of a particular sequence of action. The system just gets a reward instead of much information in the end. 
+It is a very sparse feedback, which means the number of trials needed is very large because in every trial you only give it a little information. \\ \\
+
+In supervised learning, you give 10-10,000 bits per sample. When doing ImageNet classification, for example, there is 1 thousands categories. The information is 10 bits. \\ \\
+
+Think about this situation: you showed machine with video clips and ask it to predict what happened next. And you show it what happens. The information you give to machine is much larger(10 frames have really huge amounts information for machine to predict). So if it is able to make that prediction, it has to learn a lot about the structure of the wild. For example: if you are a learning machine and your entire world consist of short video clips. And the camera transfers a little bit to the left or right(The data also includes how much the camera moves). We want to train the machine to predict what it looks like after the move. If the machine can learn it, it has to learn internally some representation of depth. So train a machine to make that prediction will implicitly have it learn: 
+\begin{enumerate}
+    \item The world of 3D dimension. 
+    \item Raise depth for everything
+    \item Predict depth from a single(or several) image.
+\end{enumerate} 
+After it predicts, something pops up like occlusion edges. The edges will move after moving the view.\\ \\
+
+Through the prediction based learning, the machine will learn a lot such as 3D world and the objects in the world separated from the background unsupervisedly. And because you are asking a lot from machine, so it learns a lot of regularities of the world with relatively small number of samples. \\ \\
+
+There is a analogy of mahcine learning and the cake. Almost everything we learn we learned in unsupervised learning. We learn a little bit through supervised learning, and we learn a tiny bit throught reinforcement learning. It cannot be any other way because 
+
 \end{document}

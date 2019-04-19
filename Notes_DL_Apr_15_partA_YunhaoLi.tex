@@ -12,7 +12,7 @@
 \maketitle
 
 \section{Theory}
-21:45 - 52:00
+21:45 - 51:55
 \subsection{Introduction}
 
 The term is "Unsupervised Learning" or "Self-supervised Learning". And "Self-supervised Leaning" maybe more descriptive of what is going on. \\ \\
@@ -74,7 +74,10 @@ The baby only learn the very elementary things and doesn't have the idea of the 
 
 World model has many built-in knowledge, which is what we called common sense(usual, not the term). You can infer a lot from the few words, such as, it is a man, it is at work. And You can imagine the scenario. You know a lot because You know the constraints of the world. When our idea of the world is violated, there will be several attitudes. The first one is you pay attention because something you didn't predict actually occurred. That could be dangerous or funny. The reason you pay attention because you can learn something that violated your model and that means your model is wrong.\\ \\
 
-How do we do unsupervised learning? 
+How do we do unsupervised learning? \\ 
+Prediction is kind of a reconstruction. For example, you can train a system to predict the end of a video from the beginning. But you can also do it in the other direction(given the end, predict what happened before). Completing the missing information, filling the blanks, that's the purpose of unsupervised learning.\\ \\
+
+So there is a problem: if I ask you to predict the future of a video with given video clips, many plausible things can happen. There is no single correct answer for this. The energy base learning will be useful. We need to construct a predictor that can predict multiple things, not just one single future prediction. The world is not entirely predictable. There is a lot of uncertainty. The question is, how do construct machine to predict things. The immediate answer is we can predict a distribution instead of predicting a single point.(e.g. Put a pen on table and let it go. The pen falls in a different direction every time. The directions is in a distribution) If you want to predict a frame of video, there is a distribution of images. You will have to parameterize the distribution of images. The basic possible to parameterize the distribution. We don't have density models or condition models of natural images. The main issue is that we don't know how to represent normalized distributions. Giving a quality of goodness or badness to a particular image is maybe possible, but training this into a distribution is very hard. That is one reason for introducing energy base models.
 
 
 \end{document}

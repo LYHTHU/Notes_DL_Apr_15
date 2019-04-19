@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 \title{Unsupervised Learning}
 % Deep Learning Note for April 15
@@ -11,7 +12,7 @@
 \maketitle
 
 \section{Theory}
-
+21:45 - 52:00
 \subsection{Introduction}
 
 The term is "Unsupervised Learning" or "Self-supervised Learning". And "Self-supervised Leaning" maybe more descriptive of what is going on. \\ \\
@@ -50,8 +51,30 @@ After it predicts, something pops up like occlusion edges. The edges will move a
 
 Through the prediction based learning, the machine will learn a lot such as 3D world and the objects in the world separated from the background unsupervisedly. And because you are asking a lot from machine, so it learns a lot of regularities of the world with relatively small number of samples. \\ \\
 
-There is a analogy of machine learning and the cake. Almost everything we learn we learned in unsupervised learning. We learn a little bit through supervised learning, and we learn a tiny bit through reinforcement learning. \\ \\
+There is a analogy of machine learning and the cake. Almost everything we learn we learned in unsupervised learning. We learn a little bit through supervised learning, and we learn a tiny bit through reinforcement learning. \\
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{cake.png}
+\caption{Cake analogy}
+\label{fig:label}
+\end{figure}
+\\
 
-Unsupervised learning seems succeeds in Natural Language Processing(NLP). The default best way to train a NLP system is to train an autoencoder or denoising autoencoder. The idea of BERT, you take a window of a dozen words over corpus. You take out about 15 percent of the words and you ask the system to predict what words are missing. It is type of autoencoder or denoising autoencoder in particular. After you going through billions of windows over text, you use the internal of this network as an input to a supervised task(text classification, summary, etc). That works really well. But that way does not perfectly worked in image recognition in video.(43:30)
+Unsupervised learning seems succeeds in Natural Language Processing(NLP). The default best way to train a NLP system is to train an autoencoder or denoising autoencoder. The idea of BERT, you take a window of a dozen words over corpus. You take out about 15 percent of the words and you ask the system to predict what words are missing. It is type of autoencoder or denoising autoencoder in particular. After you going through billions of windows over text, you use the internal of this network as an input to a supervised task(text classification, summary, etc). That works really well. But that way does not perfectly worked in image recognition in video. \\ \\
+
+Unsupervised learning is the dark matter of AI.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{DarkMatter.png}
+\caption{Dark Matter. The cup trick.}
+\label{fig2:label}
+\end{figure}
+
+The baby only learn the very elementary things and doesn't have the idea of the object permanence. If we take an object and hide it, and the baby doesn't know that it still exists. \\ \\
+
+World model has many built-in knowledge, which is what we called common sense(usual, not the term). You can infer a lot from the few words, such as, it is a man, it is at work. And You can imagine the scenario. You know a lot because You know the constraints of the world. When our idea of the world is violated, there will be several attitudes. The first one is you pay attention because something you didn't predict actually occurred. That could be dangerous or funny. The reason you pay attention because you can learn something that violated your model and that means your model is wrong.\\ \\
+
+How do we do unsupervised learning? 
+
 
 \end{document}

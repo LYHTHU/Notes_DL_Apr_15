@@ -50,6 +50,8 @@ After it predicts, something pops up like occlusion edges. The edges will move a
 
 Through the prediction based learning, the machine will learn a lot such as 3D world and the objects in the world separated from the background unsupervisedly. And because you are asking a lot from machine, so it learns a lot of regularities of the world with relatively small number of samples. \\ \\
 
-There is a analogy of mahcine learning and the cake. Almost everything we learn we learned in unsupervised learning. We learn a little bit through supervised learning, and we learn a tiny bit throught reinforcement learning. It cannot be any other way because 
+There is a analogy of machine learning and the cake. Almost everything we learn we learned in unsupervised learning. We learn a little bit through supervised learning, and we learn a tiny bit through reinforcement learning. \\ \\
+
+Unsupervised learning seems succeeds in Natural Language Processing(NLP). The default best way to train a NLP system is to train an autoencoder or denoising autoencoder. The idea of BERT, you take a window of a dozen words over corpus. You take out about 15 percent of the words and you ask the system to predict what words are missing. It is type of autoencoder or denoising autoencoder in particular. After you going through billions of windows over text, you use the internal of this network as an input to a supervised task(text classification, summary, etc). That works really well. But that way does not perfectly worked in image recognition in video.(43:30)
 
 \end{document}

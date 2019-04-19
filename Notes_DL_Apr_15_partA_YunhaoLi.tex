@@ -13,16 +13,26 @@
 \section{Theory}
 
 \subsection{Introduction}
+
 The term is "Unsupervised Learning" or "Self-supervised Learning". And "Self-supervised Leaning" maybe more descriptive of what is going on. \\ \\
 
 The main motivation for Self-supervised Leaning is that it is kind of learning that takes place in human or animals. \\ \\
 
 The main limitation of the learning system(AI and machine learning in particular) today is the fact that we are limited to use supervised learning or reinforcement learning. Both of them are very inefficient because they requires either many many trials or a lot of data manually annotated by humans. That limits information that we can feed the machine for it to learn. \\ \\
 
-The idea of unsupervised learning is that the machine should discover the structure of the given data as much as possible. (e.g. Children learn new visual exception very quickly because they already have elaborated internal representations mostly by observation and a little by interation.) \\ \\
+The idea of unsupervised learning is that the machine should discover the structure of the given data as much as possible. (e.g. Children learn new visual exception very quickly because they already have elaborated internal representations mostly by observation and a little by interaction.) \\ \\
 
 How can we do it for machines? It has vary practical consequences. For example, Facebook want to translate every language to other languages. There are about 5k-7k languages. And we don't have parallel text translated from every language from others. So supervised learning doesn't work. People think about multi-lingual translator with encoder that encode text in each language into some internal representation of the meaning of the sentence and separate decoders for every language. So the problem of learning $n^2$ translator is transformed into $n$ encodes and $n$ decodes. Even so, the significant amount of training data is needed. \\ \\    
 
-One thing that really works very well for reducing needed labeled samples to train for particular task is transfer learning. For example, in vision, you train a gigantic ConvNet on enormous amounts of data that either have been manually labeled or you train it to predict labels of free data(e.g. photos on Instagram). Then you chopped of the last layer of the network and you use the representation learned this way as input to supervised classifier for particular task.(stop at 26:50)
+One thing that really works very well for reducing needed labeled samples to train for particular task is transfer learning. For example, in vision, you train a gigantic ConvNet on enormous amounts of data that either have been manually labeled or you train it to predict labels of free data(e.g. photos on Instagram). Then you chopped of the last layer of the network and you use the representation learned this way as input to supervised classifier for particular task. \\ \\
+
+There is a lot of situation that we don't have a lot of labeled data. People want to detect rare occurrences of things. There is an example: The gunshot murderer of New Zealand broadcast the video live on Facebook. And the automatic video classification system didn't detected that video should be shut down. The problem is that, firstly we don't have many training samples. How do you train machine with very few samples? The similar problem in medicine is much more positive application where you want to train a system to detect rare diseases in medical images or things like that.\\ \\
+
+So how do get machines to learn with very small amount of data? Here is another much more immediate example: Many companies try to develop automatic driving systems. It is very hard because perception systems need to be trained with lots of cases, which maybe very rare actually. You'd like machine to have some common sense to realize some situations. There is an example of Tesla. There is a white truck stuck across the road, and the radar didn't see that stationary object. The radar did detect stationary things but it eliminated it as an obstacle. They only sees cars moving around you or next to you. The vision that Tesla used is a convolution net. And it is not trained with this situation(white truck). So it assumed the road is open because the view is white and it didn't break.\\ \\
+
+Here is another issue: how do human learns to drive a car after training for about 20 hours? If you try to use a existing reinforcement learning method to train a car to drive itself, you will have to do it in a simulator. Because the system will learns from many thousands of accidents and it will learns not to do the wrong decision. It just tries something and sees what the result is. And the better things may happen next time. Human have a pretty good model that predicts what may happen. So we can know the result without trying it. This model is acquired by observing which is a form of unsupervised learning.\\ \\
+So that is a big obstacle to progress in AI is the fact we don't now entirely how to use unsupervised learning in a good way. Another one is that we need to combine deep learning with reasoning. We need to train systems to reason, not just perceive. \\ \\
+
+The reason we need unsupervised learning is the fact that the number of the amount of the data we ask machine to predict is sort of different. These different paradigms of learning are very different. \\ \\
 
 \end{document}
